@@ -1,4 +1,7 @@
 deb/
 deb-unpack/
+old/
 *.kate-swp
 .directory
+*.tar
+*.tar.xz

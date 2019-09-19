@@ -19,4 +19,6 @@
 # -v $HOME/.Xauthority:/home/user/.Xauthority 
 # -v /tmp/.aksusb:/tmp/.aksusb -v /tmp/.X11-unix:/tmp/.X11-unix
 
-docker run -it --rm -e DISPLAY -v $HOME/1s:/root/1s -v /$HOME/.1C:/root/.1C -v /tmp/.aksusb:/tmp/.aksusb -v /tmp/.X11-unix:/tmp/.X11-unix client1c
+# В контейнере 1С запускается под пользователем appuser
+
+docker run -it --rm -e DISPLAY -v $HOME/1s:/home/appuser/1s -v /$HOME/.1C:/home/appuser/.1C -v /tmp/.aksusb:/tmp/.aksusb -v /tmp/.X11-unix:/tmp/.X11-unix client1c
